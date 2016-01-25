@@ -117,13 +117,21 @@ TableModel.prototype =
                         this.insertColumnAtIdx(i+1);
                 },
 
+                // hang
                 forEachRow : function (f) {
 		/* A COMPLETER */
+                    for (var i = 0; i < this.height; i++) {
+                        f(idxToRow(i));
+                    }
 
                 },
 
+                // lie
                 forEachCol : function (f) {
 		/* A COMPLETER */
+                    for (var i = o; i < this.width; i++) {
+                        f(idxToCol(i));
+                    }
                 }
 
             }
