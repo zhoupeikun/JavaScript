@@ -15,13 +15,23 @@ Cell.prototype = {
 	/* A COMPLETER */
     },
 
-    getView : function () { /* A COMPLETER */ },
-    setView : function (v) {  /* A COMPLETER */ },
+    getView : function () { 
+   /* A COMPLETER */ 
+        return this.view;
+},
+    setView : function (v) { 
+     /* A COMPLETER */ 
+        this.view = v;
+ },
 
-    getFormula : function () {  /* A COMPLETER */ },
+    getFormula : function () { 
+     /* A COMPLETER */ 
+        return this.formula;
+ },
 
     setFormula : function (s) {
 	/* A COMPLETER */
+        this.formula = s;
     },
 
 
