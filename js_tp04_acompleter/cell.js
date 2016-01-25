@@ -12,28 +12,26 @@ Cell.prototype = {
 
     setValue : function (v) {
         this.value = v;
-	/* A COMPLETER */
+        if (typeof this.view.notify == "function")
+                this.view.notify(this);
     },
 
     getView : function () { 
-   /* A COMPLETER */ 
         return this.view;
-},
-    setView : function (v) { 
-     /* A COMPLETER */ 
-        this.view = v;
- },
-
-    getFormula : function () { 
-     /* A COMPLETER */ 
-        return this.formula;
- },
-
-    setFormula : function (s) {
-	/* A COMPLETER */
-        this.formula = s;
     },
 
+    setView : function (v) { 
+        this.view = v;
+    },
 
+    getFormula : function () { 
+        return this.formula;
+    },
+
+    setFormula : function (s) {
+        var f = Formula.parse(s);
+        this.formula = s;
+        this.setValue(f.eval());
+    },
 
 }

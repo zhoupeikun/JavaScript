@@ -24,9 +24,9 @@ TableModel.prototype =
                 res += (s.charCodeAt(i) - 64);
             }
             return (res - 1);
-        };
+            };
 
-        var idxToCol = function (i) {
+            var idxToCol = function (i) {
             var res = "";
             var n = i+1;
             var c = 0;
@@ -35,38 +35,37 @@ TableModel.prototype =
                 c = c == 0 ? 26 : c;
                 res = String.fromCharCode(c + 64) + res;
                 n = ((n-c)/26) | 0;
-            };
+                };
             return res;
 
-        };
+            };
 
 	var rowToIdx = function (r) {
 	    return r-1;
 	};
 
-        var idxToRow = function (i) {
-            return (i+1).toString();
-        }
+            var idxToRow = function (i) {
+                return (i+1).toString();
+            }
 
 	var newLine = function (len) {
 	    var res = new Array(len);
-            for (var i = 0; i < len; i++)
-                res[i] = new Cell();
+                for (var i = 0; i < len; i++)
+                    res[i] = new Cell();
 	};
 
 
 	return {
 
-
 	    getWidth : function () { return width; },
 	    getHeight : function () { return height; },
 
 
-            firstLine : function () { return this.height ? "1" : ""; },
-            lastLine : function () { return this.height ? this.height.toString() : ""; },
+                firstLine : function () { return this.height ? "1" : ""; },
+                lastLine : function () { return this.height ? this.height.toString() : ""; },
 
-            firstColumn : function () { return this.width ? "A" : ""; },
-            lastColumn : function () { return idxToCol(this.width); },
+                firstColumn : function () { return this.width ? "A" : ""; },
+                lastColumn : function () { return idxToCol(this.width); },
 
 	    getCell : function (c, r) {
 		var j = rowToIdx(r);
@@ -100,31 +99,33 @@ TableModel.prototype =
 		    this.insertLineAtIdx(i+1);
 	    },
 
-            insertColumnAtIdx : function (i) {
-                this.cells.forEach(function (_, _, a) {
-                    a.splice(i, 0, new Cell());
-                });
-            },
-            insertColumnBefore : function (c) {
-                var i = colToIdx(c);
-                if (i >= 0 && i < this.width)
-                    this.insertColumnAtIdx(i);
-            },
+                insertColumnAtIdx : function (i) {
+                    this.cells.forEach(function (_, _, a) {
+                        a.splice(i, 0, new Cell());
+                    });
+                },
+                
+                insertColumnBefore : function (c) {
+                    var i = colToIdx(c);
+                    if (i >= 0 && i < this.width)
+                        this.insertColumnAtIdx(i);
+                },
 
-            insertColumnAfter : function (c) {
-                var i = colToIdx(c);
-                if (i >= 0 && i < this.width)
-                    this.insertColumnAtIdx(i+1);
-            },
+                insertColumnAfter : function (c) {
+                    var i = colToIdx(c);
+                    if (i >= 0 && i < this.width)
+                        this.insertColumnAtIdx(i+1);
+                },
 
-            forEachRow : function (f) {
+                forEachRow : function (f) {
 		/* A COMPLETER */
-            },
 
-            forEachCol : function (f) {
+                },
+
+                forEachCol : function (f) {
 		/* A COMPLETER */
+                }
+
             }
-
-        }
 
 }) ();
