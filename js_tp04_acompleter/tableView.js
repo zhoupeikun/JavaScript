@@ -40,6 +40,30 @@ TableView.prototype.createTable = function () {
 
 
     /* A COMPLETER */
+    var parent = document.getElementById("table");
+    var child1 = document.getElementById("thead");
+    var child2 = document.getElementById("tbody");
+    parent.removeChild(child1);
+    parent.removeChild(child2);
+
+
+
+    var thead = document.createElement("thead");
+   // var newline = document.createElement("tr");
+/*    for (var i = 0; i < thead.rows[0].cells.length; i++) {
+        var cell = newline.insertCell(i);
+
+        }*/
+
+    var f = function(name) {
+        var thead = document.createElement("thead");
+        var newline = document.createElement("tr");
+        var text = document.createTextNode();
+        newline.appendChild(text);
+    }
+
+    forEachCol :function(f);
+
 
 
 
