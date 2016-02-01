@@ -1,4 +1,4 @@
-function TableModel (w, h) {
+1function TableModel (w, h) {
     var _this = this;
     this.width = w || 1;
     this.height = h || 1;
@@ -126,7 +126,7 @@ TableModel.prototype =
 
                 },
 
-                // lie
+                // lie  name
                 forEachCol : function (f) {
 		/* A COMPLETER */
                     for (var i = o; i < this.width; i++) {
