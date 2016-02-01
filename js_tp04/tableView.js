@@ -57,12 +57,13 @@ TableView.prototype.createTable = function () {
 
     var f = function(name) {
         var thead = document.createElement("thead");
-        var newline = document.createElement("tr");
+        var newline = document.createElement("th");
         var text = document.createTextNode();
         newline.appendChild(text);
     }
 
     forEachCol :function(f);
+
 
 
 
