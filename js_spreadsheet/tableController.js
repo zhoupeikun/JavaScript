@@ -62,10 +62,49 @@ var TableController = function (view) {
 	}
     };
 
+    //To do, five function 
+
+    function gras(e) {
+        var td = this_.selection;
+        if(!td) return;
+            form.style.fontWeight = bold;
+
+    };
+
+ /*   function italique(e) {
+
+    };
+    
+    function souligne(e) {
+
+    };*/
+
+    function textCouleur(e) {
+        var td = this_.selection;
+        if(!td) return;
+            td.style.color="#3333ff"
+    };
+
+    function caseCouleur(e) {
+        var td = this_.selection;
+        if(!td) return;
+            td.style.backgroundColor = "red";
+    };
+
     view.button.addEventListener("click", buttonClickHandler);
     view.input.addEventListener("keypress", function (e) {
 	if (e.keyCode == 13) //[enter]
 	    buttonClickHandler(e);
     });
+
+    view.button_gras.addEventListener("click", gras);
+
+
+    //click 'choix de couleur du texte'
+    view.button_textCouleur.addEventListener("click", textCouleur);
+
+    //click 'choix du couleur du fond de case'
+    view.button_caseCouleur.addEventListener("click", caseCouleur);
+
 
 }
