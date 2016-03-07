@@ -18,6 +18,27 @@ var TableView = function (id, tableModel) {
     this.button.innerHTML = "&#10003;";
     this.div.appendChild(this.button);
 
+    //add five button 
+    this.button1= document.createElement("button");
+    this.button1.innerHTML = "gras"; 
+    this.div.appendChild(this.button1);
+
+    this.button = document.createElement("button");
+    this.button.innerHTML = "italique";
+    this.div.appendChild(this.button);
+
+    this.button = document.createElement("button");
+    this.button.innerHTML = "souligne";
+    this.div.appendChild(this.button);
+
+    this.button = document.createElement("button");
+    this.button.innerHTML = "choix de couleur du texte";
+    this.div.appendChild(this.button);
+
+    this.button = document.createElement("button");
+    this.button.innerHTML = "choix du couleur du fond de case";
+    this.div.appendChild(this.button);
+
     this.table = document.createElement("table");
     this.div.appendChild(this.table);
 };
