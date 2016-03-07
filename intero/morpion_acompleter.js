@@ -101,7 +101,7 @@ var clickHandler = function (ev) {
 
 	    // Afficher le message dans le div HTML message.
 	    /* A COMPLETER */
-	    document.getElementById("message").innerHTML = message;
+	    document.getElementById("message").innerHTML = message;1
 	    fini = true;
 	}
     }
