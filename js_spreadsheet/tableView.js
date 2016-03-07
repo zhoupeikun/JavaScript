@@ -57,7 +57,7 @@ TableView.prototype.createTable = function () {
         var text = document.createTextNode(j);
         td.appendChild(text);
         tr.appendChild(td);
-        model.forEachCol(function (i) {11
+        model.forEachCol(function (i) {
             var cell = model.getCell(i,j);
             var td = document.createElement("td");
             cell.setView(td);
