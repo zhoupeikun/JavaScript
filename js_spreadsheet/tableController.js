@@ -97,6 +97,7 @@ var TableController = function (view) {
 	    buttonClickHandler(e);
     });
 
+    // click 'gras'
     view.button_gras.addEventListener("click", gras);
 
 
