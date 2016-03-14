@@ -75,7 +75,10 @@ var TableController = function (view) {
         var td = this_.selection;
         if(!td) return;
             //form.style.fontWeight = bold;
+        if(td.style.fontWeight == "normal")
             td.style.fontWeight = "bold";
+        else
+            td.style.fontWeight = "normal";
 
     };
 
@@ -83,7 +86,10 @@ var TableController = function (view) {
     function italique(e) {
         var td = this_.selection;
         if(!td) return;
+        if(td.style.fontStyle == "normal")
             td.style.fontStyle = "italic";
+        else
+            td.style.fontStyle = "normal";
 
     };
 
@@ -91,7 +97,10 @@ var TableController = function (view) {
     function souligne(e) {
         var td = this_.selection;
         if(!td) return;
+        if(td.style.textDecoration == "")
             td.style.textDecoration = "underline";
+        else
+            td.style.textDecoration = "";
 
     };
 

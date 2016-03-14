@@ -20,7 +20,7 @@ var TableView = function (id, tableModel) {
 
     //add five button 
     this.button_gras= document.createElement("button");
-    this.button_gras.innerHTML = "gras"; 
+    this.button_gras.innerHTML = "gras";
     this.div.appendChild(this.button_gras);
 
     this.button_italique = document.createElement("button");
