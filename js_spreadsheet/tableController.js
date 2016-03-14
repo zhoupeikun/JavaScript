@@ -41,6 +41,13 @@ var TableController = function (view) {
     view.table.addEventListener("mousedown", tdClickHandler);
 
 
+    // multiple selection
+    function tdSelctHandler (e) {
+
+
+    };
+
+    view.table.addEventListener("mouseup", tdSelctHandler);
 
 
     function buttonClickHandler (e) {
@@ -62,29 +69,40 @@ var TableController = function (view) {
 	}
     };
 
-    //To do, five function 
-
+    //To do, five functions
+    // gras
     function gras(e) {
         var td = this_.selection;
         if(!td) return;
-            form.style.fontWeight = bold;
+            //form.style.fontWeight = bold;
+            td.style.fontWeight = "bold";
 
     };
 
- /*   function italique(e) {
+    // italic
+    function italique(e) {
+        var td = this_.selection;
+        if(!td) return;
+            td.style.fontStyle = "italic";
 
     };
-    
+
+    // underline
     function souligne(e) {
+        var td = this_.selection;
+        if(!td) return;
+            td.style.textDecoration = "underline";
 
-    };*/
+    };
 
+    // text's color
     function textCouleur(e) {
         var td = this_.selection;
         if(!td) return;
             td.style.color="#3333ff"
     };
 
+    // case's color
     function caseCouleur(e) {
         var td = this_.selection;
         if(!td) return;
@@ -100,6 +118,11 @@ var TableController = function (view) {
     // click 'gras'
     view.button_gras.addEventListener("click", gras);
 
+    // click 'italique'
+    view.button_italique.addEventListener("click", italique);
+
+    // click 'souligne'
+    view.button_souligne.addEventListener('click', souligne);
 
     //click 'choix de couleur du texte'
     view.button_textCouleur.addEventListener("click", textCouleur);
