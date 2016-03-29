@@ -35,6 +35,18 @@ var TableView = function (id, tableModel) {
     this.button_textCouleur.innerHTML = "choix de couleur du texte";
     this.div.appendChild(this.button_textCouleur);
 
+/*    //selection of color
+    this.liste = document.createElement("ul");
+    this.liste.id = "listeCouleurs";
+
+    this.item1 = document.createElement("li");
+    this.textCT = document.createTextNode("Couleur Texte : ");
+    this.item1.appendChild(this.textCT);
+
+    this.item2 = document.createElement("li");
+    this.textCF = document.createTextNode("Couleur Fond : ");
+    this.item2.appendChild(this.textCF);*/
+
     this.button_caseCouleur = document.createElement("button");
     this.button_caseCouleur.innerHTML = "choix du couleur du fond de case";
     this.div.appendChild(this.button_caseCouleur);
