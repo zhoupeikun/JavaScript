@@ -108,7 +108,7 @@ var TableController = function (view) {
     function textCouleur(e) {
         var td = this_.selection;
         if(!td) return;
-            td.style.color="#3333ff"
+            td.style.color="#ab2567";
     };
 
     // case's color
