@@ -108,14 +108,20 @@ var TableController = function (view) {
     function textCouleur(e) {
         var td = this_.selection;
         if(!td) return;
-            td.style.color="#ab2567";
+            //td.style.color="#ab2567";
+            var couleur;
+            couleur = (document.getElementById("textColor")).value;
+            td.style.color = couleur;
     };
 
     // case's color
     function caseCouleur(e) {
         var td = this_.selection;
         if(!td) return;
-            td.style.backgroundColor = "red";
+            //td.style.backgroundColor = "red";
+            var couleur;
+            couleur = (document.getElementById("bgColor")).value;
+            td.style.backgroundColor = couleur;
     };
 
     view.button.addEventListener("click", buttonClickHandler);
@@ -130,14 +136,16 @@ var TableController = function (view) {
     // click 'italique'
     view.button_italique.addEventListener("click", italique);
 
-    // click 'souligne'
+    // click 'souligne'1
     view.button_souligne.addEventListener('click', souligne);
 
     //click 'choix de couleur du texte'
-    view.button_textCouleur.addEventListener("click", textCouleur);
+    //view.button_textCouleur.addEventListener("click", textCouleur);
+    view.textColor.addEventListener("change", textCouleur);
 
     //click 'choix du couleur du fond de case'
-    view.button_caseCouleur.addEventListener("click", caseCouleur);
+    //view.button_caseCouleur.addEventListener("click", caseCouleur);
+     view.bgColor.addEventListener("change", caseCouleur);
 
 
 }

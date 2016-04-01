@@ -20,27 +20,38 @@ var TableView = function (id, tableModel) {
 
     //add five button 
     this.button_gras= document.createElement("button");
-    this.button_gras.innerHTML = "gras";
+    this.button_gras.innerHTML = "<b>B</b>";
     this.div.appendChild(this.button_gras);
 
     this.button_italique = document.createElement("button");
-    this.button_italique.innerHTML = "italique";
+    this.button_italique.innerHTML = "<i>I</i>";
     this.div.appendChild(this.button_italique);
 
     this.button_souligne = document.createElement("button");
-    this.button_souligne.innerHTML = "souligne";
+    this.button_souligne.innerHTML = "<u>U</u>";
     this.div.appendChild(this.button_souligne);
 
-    this.button_textCouleur = document.createElement("button");
+/*    this.button_textCouleur = document.createElement("button");
     this.button_textCouleur.innerHTML = "choix de couleur du texte";
     this.button_textCouleur.classList.add('jscolor {valueElement:null,value:'000000'}');
-    this.div.appendChild(this.button_textCouleur);
+    this.div.appendChild(this.button_textCouleur);*/
+
+    this.textColor = document.createElement("input");
+    this.textColor.type = "color";
+    this.textColor.id = "textColor";
+    this.textColor.value = "#000000";
+    this.div.appendChild(this.textColor);
+
+    this.bgColor = document.createElement("input");
+    this.bgColor.type = "color";
+    this.bgColor.id = "bgColor";
+    this.bgColor.value = "#CC0000";
+    this.div.appendChild(this.bgColor);
 
 
-
-    this.button_caseCouleur = document.createElement("button");
+/*    this.button_caseCouleur = document.createElement("button");
     this.button_caseCouleur.innerHTML = "choix du couleur du fond de case";
-    this.div.appendChild(this.button_caseCouleur);
+    this.div.appendChild(this.button_caseCouleur);*/
 
     this.table = document.createElement("table");
     this.div.appendChild(this.table);
